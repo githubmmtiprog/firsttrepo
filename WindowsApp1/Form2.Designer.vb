@@ -24,9 +24,6 @@ Partial Class Form2
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.OjtPract_RiceDataSet = New WindowsApp1.ojtPract_RiceDataSet()
-        Me.UsersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.UsersTableAdapter = New WindowsApp1.ojtPract_RiceDataSetTableAdapters.usersTableAdapter()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
@@ -35,33 +32,22 @@ Partial Class Form2
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.QueriesTableAdapter1 = New WindowsApp1.DataSet1TableAdapters.QueriesTableAdapter()
         Me.IDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.UsernameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PasswordDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.RankDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.QueriesTableAdapter1 = New WindowsApp1.DataSet1TableAdapters.QueriesTableAdapter()
-        CType(Me.OjtPract_RiceDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.UsersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.UsersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.OjtPract_RiceDataSet = New WindowsApp1.ojtPract_RiceDataSet()
+        Me.UsersTableAdapter = New WindowsApp1.ojtPract_RiceDataSetTableAdapters.usersTableAdapter()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.UsersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.OjtPract_RiceDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'OjtPract_RiceDataSet
-        '
-        Me.OjtPract_RiceDataSet.DataSetName = "ojtPract_RiceDataSet"
-        Me.OjtPract_RiceDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'UsersBindingSource
-        '
-        Me.UsersBindingSource.DataMember = "users"
-        Me.UsersBindingSource.DataSource = Me.OjtPract_RiceDataSet
-        '
-        'UsersTableAdapter
-        '
-        Me.UsersTableAdapter.ClearBeforeFill = True
         '
         'SplitContainer1
         '
@@ -141,12 +127,16 @@ Partial Class Form2
         '
         'DataGridView1
         '
+        Me.DataGridView1.AllowDrop = True
         Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IDDataGridViewTextBoxColumn, Me.UsernameDataGridViewTextBoxColumn, Me.PasswordDataGridViewTextBoxColumn, Me.RankDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.UsersBindingSource
         Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
+        Me.DataGridView1.ImeMode = System.Windows.Forms.ImeMode.[On]
         Me.DataGridView1.Location = New System.Drawing.Point(0, 0)
+        Me.DataGridView1.MultiSelect = False
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(530, 450)
         Me.DataGridView1.TabIndex = 0
@@ -176,6 +166,20 @@ Partial Class Form2
         Me.RankDataGridViewTextBoxColumn.HeaderText = "rank"
         Me.RankDataGridViewTextBoxColumn.Name = "RankDataGridViewTextBoxColumn"
         '
+        'UsersBindingSource
+        '
+        Me.UsersBindingSource.DataMember = "users"
+        Me.UsersBindingSource.DataSource = Me.OjtPract_RiceDataSet
+        '
+        'OjtPract_RiceDataSet
+        '
+        Me.OjtPract_RiceDataSet.DataSetName = "ojtPract_RiceDataSet"
+        Me.OjtPract_RiceDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'UsersTableAdapter
+        '
+        Me.UsersTableAdapter.ClearBeforeFill = True
+        '
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -184,14 +188,14 @@ Partial Class Form2
         Me.Controls.Add(Me.SplitContainer1)
         Me.Name = "Form2"
         Me.Text = "Form2"
-        CType(Me.OjtPract_RiceDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.UsersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.Panel1.ResumeLayout(False)
         Me.SplitContainer1.Panel1.PerformLayout()
         Me.SplitContainer1.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.UsersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.OjtPract_RiceDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

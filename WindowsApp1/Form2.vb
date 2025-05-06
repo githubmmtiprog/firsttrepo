@@ -56,33 +56,26 @@
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
 
-        Using selectedRow = DataGridView1.CurrentRow
-            If selectedRow IsNot Nothing Then
-                Dim editForm As New EditUserForm With {
-                     .UserID = selectedRow.Cells("UserID").Value
-                 } 'then this
-                editForm.ShowDialog()
-                Me.UsersTableAdapter.Fill(Me.OjtPract_RiceDataSet.users)
-            Else
-                MessageBox.Show("Select a user to edit.")
-            End If
-        End Using
+        Dim EditUser As New EditUserForm() 'This
+        EditUser.ShowDialog()
+
+        Me.UsersTableAdapter.Fill(Me.OjtPract_RiceDataSet.users)
     End Sub
 
-    ' Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    'Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
     '  And then the query
     '    Dim selectedRow = DataGridView1.CurrentRow
     '    If selectedRow IsNot Nothing Then
-    '    Dim userId = selectedRow.Cells("UserID").Value
-    '    If MessageBox.Show("Are you sure you want to delete this user?", "Confirm", MessageBoxButtons.YesNo) = DialogResult.Yes Then
-    '                UsersTableAdapter.DeleteQuery(userId)
-    '    Me.UsersTableAdapter.Fill(Me.OjtPract_RiceDataSet.users)
-    '   End If
-    '   Else
-    '           MessageBox.Show("Select a user to delete.")
+    '        Dim userId = selectedRow.Cells("UserID").Value
+    '        If MessageBox.Show("Are you sure you want to delete this user?", "Confirm", MessageBoxButtons.YesNo) = DialogResult.Yes Then
+    '            UsersTableAdapter.DeleteQuery(userId)
+    '            Me.UsersTableAdapter.Fill(Me.OjtPract_RiceDataSet.users)
+    '        End If
+    '    Else
+    '        MessageBox.Show("Select a user to delete.")
     '    End If
 
-    '    End Sub
+    'End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
 

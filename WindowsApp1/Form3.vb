@@ -8,7 +8,7 @@ Public Class CreateForm
             Try
                 Dim username As String = TextBox1.Text.Trim()
                 Dim password As String = TextBox2.Text.Trim()
-                Dim rank As Integer = ComboBox1.SelectedIndex
+                Dim rank As Integer = ComboBox1.SelectedIndex + 1
                 If String.IsNullOrEmpty(username) OrElse String.IsNullOrEmpty(password) Then
                     MessageBox.Show("Username and password are required.")
                     Return
@@ -26,14 +26,14 @@ Public Class CreateForm
                 End Using
 
 
-                Dim insertQuery As String = "INSERT INTO Users (username, password, rank) VALUES (@username, @password, 1)"
+                Dim insertQuery As String = "INSERT INTO Users (username, password, rank) VALUES (@username, @password, @rank)"
                 Using insertCmd As New SqlCommand(insertQuery, conn)
                     insertCmd.Parameters.AddWithValue("@username", username)
                     insertCmd.Parameters.AddWithValue("@password", password)
+                    insertCmd.Parameters.AddWithValue("@rank", rank)
 
                     Dim rowsInserted As Integer = insertCmd.ExecuteNonQuery()
                     If rowsInserted > 0 Then
-                        MessageBox.Show("User registered successfully.")
                         TextBox1.Text = ""
                         TextBox2.Text = ""
                     Else
@@ -49,14 +49,18 @@ Public Class CreateForm
         End Using
     End Sub
 
-    ' Private Sub CreateUserForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-    '  Me.UsersTableAdapter.Fill(Me.OjtPract_RiceDataSet.users)
-    '     cboRank.Items.AddRange({"Regular", "Manager", "Admin"})
-    '     cboRank.SelectedIndex = 0
-    '   End Sub
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Me.Hide()
+        Form2.Show()
 
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+    End Sub
+
+    Private Sub CreateForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
 
     End Sub
 End Class

@@ -26,29 +26,31 @@ Partial Class CreateForm
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.User_rankTableAdapter1 = New WindowsApp1.DataSet1TableAdapters.user_rankTableAdapter()
-        Me.DataSet1 = New WindowsApp1.DataSet1()
         Me.UserrankBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DataSet1 = New WindowsApp1.DataSet1()
+        Me.User_rankTableAdapter1 = New WindowsApp1.DataSet1TableAdapters.user_rankTableAdapter()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
-        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.UserrankBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         CType(Me.UserrankBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.UserrankBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(96, 93)
+        Me.TextBox1.Location = New System.Drawing.Point(96, 90)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(100, 20)
         Me.TextBox1.TabIndex = 0
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(96, 136)
+        Me.TextBox2.Location = New System.Drawing.Point(96, 141)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TextBox2.Size = New System.Drawing.Size(100, 20)
@@ -56,27 +58,27 @@ Partial Class CreateForm
         '
         'ComboBox1
         '
-        Me.ComboBox1.DataSource = Me.UserrankBindingSource
+        Me.ComboBox1.AllowDrop = True
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(96, 179)
+        Me.ComboBox1.Items.AddRange(New Object() {"1", "2", "3"})
+        Me.ComboBox1.Location = New System.Drawing.Point(96, 191)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(86, 21)
+        Me.ComboBox1.Size = New System.Drawing.Size(100, 21)
         Me.ComboBox1.TabIndex = 2
-        Me.ComboBox1.Text = "Select Rank"
         '
-        'User_rankTableAdapter1
+        'UserrankBindingSource
         '
-        Me.User_rankTableAdapter1.ClearBeforeFill = True
+        Me.UserrankBindingSource.DataMember = "user_rank"
+        Me.UserrankBindingSource.DataSource = Me.DataSet1
         '
         'DataSet1
         '
         Me.DataSet1.DataSetName = "DataSet1"
         Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'UserrankBindingSource
+        'User_rankTableAdapter1
         '
-        Me.UserrankBindingSource.DataMember = "user_rank"
-        Me.UserrankBindingSource.DataSource = Me.DataSet1
+        Me.User_rankTableAdapter1.ClearBeforeFill = True
         '
         'Label1
         '
@@ -90,7 +92,7 @@ Partial Class CreateForm
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(96, 120)
+        Me.Label2.Location = New System.Drawing.Point(96, 125)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(81, 13)
         Me.Label2.TabIndex = 4
@@ -99,7 +101,7 @@ Partial Class CreateForm
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(96, 163)
+        Me.Label3.Location = New System.Drawing.Point(96, 175)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(72, 13)
         Me.Label3.TabIndex = 5
@@ -137,11 +139,16 @@ Partial Class CreateForm
         Me.Label4.TabIndex = 8
         Me.Label4.Text = "Create Account Form"
         '
+        'UserrankBindingSource1
+        '
+        Me.UserrankBindingSource1.DataMember = "user_rank"
+        Me.UserrankBindingSource1.DataSource = Me.DataSet1
+        '
         'CreateForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(484, 361)
+        Me.ClientSize = New System.Drawing.Size(449, 361)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
@@ -154,8 +161,9 @@ Partial Class CreateForm
         Me.Name = "CreateForm"
         Me.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.Text = "Create Form"
-        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.UserrankBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.UserrankBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -173,4 +181,5 @@ Partial Class CreateForm
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Label4 As Label
+    Friend WithEvents UserrankBindingSource1 As BindingSource
 End Class
