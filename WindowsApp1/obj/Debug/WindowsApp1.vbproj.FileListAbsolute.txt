@@ -1,0 +1,15 @@
+C:\Users\mmtiprog2.MMTI2\Desktop\first proj\WindowsApp1\bin\Debug\WindowsApp1.exe.config
+C:\Users\mmtiprog2.MMTI2\Desktop\first proj\WindowsApp1\bin\Debug\WindowsApp1.exe
+C:\Users\mmtiprog2.MMTI2\Desktop\first proj\WindowsApp1\bin\Debug\WindowsApp1.pdb
+C:\Users\mmtiprog2.MMTI2\Desktop\first proj\WindowsApp1\bin\Debug\WindowsApp1.xml
+C:\Users\mmtiprog2.MMTI2\Desktop\first proj\WindowsApp1\obj\Debug\WindowsApp1.vbproj.AssemblyReference.cache
+C:\Users\mmtiprog2.MMTI2\Desktop\first proj\WindowsApp1\obj\Debug\WindowsApp1.vbproj.SuggestedBindingRedirects.cache
+C:\Users\mmtiprog2.MMTI2\Desktop\first proj\WindowsApp1\obj\Debug\WindowsApp1.Form1.resources
+C:\Users\mmtiprog2.MMTI2\Desktop\first proj\WindowsApp1\obj\Debug\WindowsApp1.Form2.resources
+C:\Users\mmtiprog2.MMTI2\Desktop\first proj\WindowsApp1\obj\Debug\WindowsApp1.Resources.resources
+C:\Users\mmtiprog2.MMTI2\Desktop\first proj\WindowsApp1\obj\Debug\WindowsApp1.vbproj.GenerateResource.cache
+C:\Users\mmtiprog2.MMTI2\Desktop\first proj\WindowsApp1\obj\Debug\WindowsApp1.vbproj.CoreCompileInputs.cache
+C:\Users\mmtiprog2.MMTI2\Desktop\first proj\WindowsApp1\obj\Debug\WindowsApp1.exe
+C:\Users\mmtiprog2.MMTI2\Desktop\first proj\WindowsApp1\obj\Debug\WindowsApp1.xml
+C:\Users\mmtiprog2.MMTI2\Desktop\first proj\WindowsApp1\obj\Debug\WindowsApp1.pdb
+C:\Users\mmtiprog2.MMTI2\Desktop\first proj\WindowsApp1\obj\Debug\WindowsApp1.CreateForm.resources
