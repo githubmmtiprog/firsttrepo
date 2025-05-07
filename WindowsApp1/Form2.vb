@@ -15,7 +15,7 @@ Public Class Form2
     Private connectionString As String = "Data Source=localhost\sqlexpress;Initial Catalog=ojtPract_Rice;Integrated Security=True"
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'DataSet1.user_rank' table. You can move, or remove it, as needed.
+
         Me.User_rankTableAdapter.Fill(Me.DataSet1.user_rank)
         ReloadForm(UserRank)
     End Sub
