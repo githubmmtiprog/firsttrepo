@@ -172,6 +172,11 @@ Represents the connection and commands used to retrieve and save data.
 Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
+<member name="T:WindowsApp1.ojtPract_RiceDataSetTableAdapters.QueriesTableAdapter2">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
 <member name="T:WindowsApp1.ojtPract_RiceDataSetTableAdapters.TableAdapterManager">
 <summary>
 TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios

@@ -1,10 +1,11 @@
 ﻿
 Imports System.Data.SqlClient
+Imports System.Security.Cryptography.X509Certificates
 Imports System.Text
 
 
 Public Class Form1
-
+    Private connectionString As String = "Data Source=localhost\sqlexpress;Initial Catalog=ojtPract_Rice;Integrated Security=True"
 
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
@@ -55,7 +56,7 @@ Public Class Form1
             Return
         End If
 
-        Dim connectionString As String = "Data Source=localhost\sqlexpress;Initial Catalog=ojtPract_Rice;Integrated Security=True"
+
         Using conn As New SqlConnection(connectionString)
             conn.Open()
 
@@ -99,6 +100,10 @@ Public Class Form1
     End Sub
 
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+
+    End Sub
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 End Class

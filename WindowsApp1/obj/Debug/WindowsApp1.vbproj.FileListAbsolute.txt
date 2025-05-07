@@ -13,4 +13,3 @@ C:\Users\mmtiprog2.MMTI2\Desktop\first proj\WindowsApp1\obj\Debug\WindowsApp1.ex
 C:\Users\mmtiprog2.MMTI2\Desktop\first proj\WindowsApp1\obj\Debug\WindowsApp1.xml
 C:\Users\mmtiprog2.MMTI2\Desktop\first proj\WindowsApp1\obj\Debug\WindowsApp1.pdb
 C:\Users\mmtiprog2.MMTI2\Desktop\first proj\WindowsApp1\obj\Debug\WindowsApp1.CreateForm.resources
-C:\Users\mmtiprog2.MMTI2\Desktop\first proj\WindowsApp1\obj\Debug\WindowsApp1.EditUserForm.resources
